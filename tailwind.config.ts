@@ -9,6 +9,9 @@ const config: Config = {
         spaceGrotesk: ["var(--font-spaceGrotesk)", "sans-serif"],
         mono: ["var(--font-roboto-mono)"],
       },
+      height: {
+        'screen-3x': '300vh'
+      }
     },
   },
   plugins: [],

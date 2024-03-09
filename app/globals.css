@@ -15,3 +15,12 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+.clipped-text {
+  color: transparent;
+  background-image: url("https://images.pexels.com/photos/73873/star-clusters-rosette-nebula-star-galaxies-73873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: center; /* Adjust this to change which part of the image shows through the text */
+  background-size: cover; /* Ensure the background covers the text area */
+}
