@@ -9,7 +9,7 @@ export default function ScrollIntoView({children}) {
   useEffect(() => {
     gsap.set(comp.current, { opacity: 0, y: 100 });
 
-    gsap.to(comp.current, {
+    let animation = gsap.to(comp.current, {
       scrollTrigger: {
         trigger: comp.current,
         start: "top bottom",
@@ -21,6 +21,12 @@ export default function ScrollIntoView({children}) {
       duration: 1,
       ease: "power1.out",
     });
+
+    // Return a cleanup function
+    return () => {
+      animation.scrollTrigger?.kill();
+      animation.kill();
+    };
   }, []);
 
   return (
